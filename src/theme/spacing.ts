@@ -24,7 +24,6 @@ export enum SPACING {
   P12 = '12px',
   P14 = '14px',
   P15 = '15px',
-  P16 = '16px',
   P17 = '17px',
   P18 = '18px',
   P19 = '19px',
@@ -41,7 +40,6 @@ export enum SPACING {
   P50 = '50px',
 
   // Large layout spacing
-  P60 = '60px',
   P65 = '65px',
   P70 = '70px',
   P74 = '74px',

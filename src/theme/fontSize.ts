@@ -12,7 +12,6 @@ export enum FONT_SIZE {
   BODY_SM = '12px',
   BODY_MD = '14px',
   BODY_LG = '16px',
-  BODY_XL = '18px',
 
   // === Utility Font Sizes (Rare Custom Use) ===
   U4 = '4px',
