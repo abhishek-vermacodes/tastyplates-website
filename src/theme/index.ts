@@ -1,0 +1,10 @@
+export { default as theme } from './theme';
+export * from './Color';
+export * from './borderRadius';
+export * from './fontWeight';
+export * from './fontSize';
+export * from './lineHeight';
+export * from './spacing';
+export * from './size';
+export * from './fontFamily';
+export * from './border';
