@@ -1,11 +1,11 @@
 
 // import { Footer } from "../footer";
-// import { Header } from "../header";
+import { Header } from "../header";
 
 export const AppShell = ({ children }: { children: React.ReactNode }) => {
   return (
     <>
-      {/* <Header/> */}
+      <Header/>
       {children}
       {/* <Footer /> */}
     </>
