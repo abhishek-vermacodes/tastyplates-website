@@ -18,7 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
+      <body cz-shortcut-listen="true">
         <StyledComponentsRegistry>
           <AppShell>{children}</AppShell>
         </StyledComponentsRegistry>
