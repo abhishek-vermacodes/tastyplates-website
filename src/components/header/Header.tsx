@@ -7,6 +7,7 @@ import { IoCartOutline } from "react-icons/io5";
 import { IoMdHeartEmpty } from "react-icons/io";
 import { GoSearch } from "react-icons/go";
 import { IoMdClose } from "react-icons/io";
+import logo from '@/assets/images/TLogo.png';
 import {
   HeaderWrapper,
   HeaderSubWrapper,
@@ -34,15 +35,8 @@ export const Header = () => {
       <HeaderWrapper>
         <HeaderSubWrapper>
           <LogoContainer>
-            <Image
-              src="/logo.png"
-              alt="Kriotek Logo"
-              width={70}
-              height={70}
-              priority
-              className="logo-image"
-            />
-            <h2>TastyPlates</h2>
+            <Image src={logo} alt="Kriotek Logo" className="logo-image" />
+            {/* <h2>TastyPlates</h2> */}
           </LogoContainer>
 
           <nav>
@@ -70,14 +64,14 @@ export const Header = () => {
               <Icon
                 icon={
                   <IoCartOutline
-                    style={{ fontSize: "24px", color: "#5D833A" }}
+                    style={{ fontSize: "24px", color: "#3b5325" }}
                   />
                 }
               />
               <Icon
                 icon={
                   <IoMdHeartEmpty
-                    style={{ fontSize: "24px", color: "#5D833A" }}
+                    style={{ fontSize: "24px", color: "#3b5325" }}
                   />
                 }
               />
@@ -87,7 +81,7 @@ export const Header = () => {
                     <IoMdClose
                       style={{
                         fontSize: "24px",
-                        color: "#5D833A",
+                        color: "#3b5325",
                         cursor: "pointer",
                       }}
                       onClick={handleToggleSearch}
@@ -96,7 +90,7 @@ export const Header = () => {
                     <GoSearch
                       style={{
                         fontSize: "24px",
-                        color: "#5D833A",
+                        color: "#3b5325",
                         cursor: "pointer",
                       }}
                       onClick={handleToggleSearch}

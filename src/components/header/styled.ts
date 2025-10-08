@@ -1,5 +1,5 @@
 import { BORDER, COLOR, SIZE_PERCENT, SIZE_PX } from "@/theme";
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 
 export const HeaderWrapper = styled.header`
   width: ${SIZE_PERCENT.P100};
@@ -8,10 +8,12 @@ export const HeaderWrapper = styled.header`
   display: flex;
   align-items: center;
   justify-content: center;
-  background: ${COLOR.white};
-  border-bottom: ${BORDER.LIGHT_GRAY};
+  /* background: ${COLOR.white}; */
+  background: #f5f5f5ce;
+  /* border-bottom: ${BORDER.LIGHT_GRAY}; */
   z-index: 30;
   overflow-x: hidden;
+  padding: 10px 0;
 
   .link {
     display: flex;
@@ -19,10 +21,7 @@ export const HeaderWrapper = styled.header`
     align-items: center;
   }
 
-  @media screen and (max-width: 1024px) {
-    justify-content: space-between;
-    z-index: 99999;
-  }
+
 `;
 
 export const HeaderSubWrapper = styled.div`
@@ -30,32 +29,16 @@ export const HeaderSubWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  @media (max-width: 575.98px) {
-    width: 100%;
-    padding: 0 15px;
-  }
-  @media (min-width: 576px) and (max-width: 1024.98px) {
-    width: 100%;
-    padding: 0 20px;
-  }
-  @media (min-width: 1025px) and (max-width: 1439.98px) {
-    width: 90%;
-  }
-  @media (min-width: 1440px) and (max-width: 1919.98px) {
-    width: 85%;
-  }
+
 `;
 
 export const LogoContainer = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-
+  width: 250px;
+ 
   .logo-image {
-    padding: 10px;
-    width: fit-content;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
   }
 `;
 
@@ -72,7 +55,8 @@ export const NavList = styled.ul`
 export const NavItem = styled.li`
   a {
     text-decoration: none;
-    color: ${COLOR.text.primary};
+    /* color: ${COLOR.text.primary}; */
+    color:  #0b1629ff;
     font-weight: 500;
     font-size: 1rem;
     padding-bottom: 4px;
@@ -105,9 +89,7 @@ export const ButtonContainer = styled.div`
   align-items: center;
   gap: 1rem;
 
-  @media (max-width: 900px) {
-    display: none;
-  }
+
 `;
 
 
@@ -130,10 +112,6 @@ export const SignInButton = styled.button`
 
  
 
-  @media (max-width: 768px) {
-    padding: 0.5rem 1.2rem;
-    font-size: 0.9rem;
-  }
 `;
 
 export const IconContainer = styled.div`
@@ -147,17 +125,17 @@ export const IconWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #5d833a14;
+  background-color: #5d833a1f;
   border-radius: 30px;
   padding: 8px;
   cursor: pointer;
-  border: 1px solid #5d833a21;
+  border: 1px solid #5d833a28;
 `;
 
 
 export const SearchBarWrapper = styled.div`
   width: 100%;
-  background: #fff;
+  background: transparent;
 
   display: flex;
   justify-content: center;
@@ -188,6 +166,7 @@ export const SearchBarWrapper = styled.div`
 
 export const SearchInput = styled.input`
   width: 60%;
+  background: #f5f5f5d0;
   max-width: 600px;
   padding: 0.8rem 1rem;
   border: 2px solid #5d833a;
@@ -196,8 +175,13 @@ export const SearchInput = styled.input`
   outline: none;
   transition: all 0.3s ease;
 
+  &::placeholder {
+    color: #3b3b3bff;
+  }
+
   &:focus {
     border-color: #3b5325;
+
   }
 
   @media (max-width: 768px) {
