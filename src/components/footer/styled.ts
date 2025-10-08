@@ -8,7 +8,7 @@ export const FooterWrapper = styled.footer`
     background-color: #f1f1f1ff;
 `;
 export const FooterContainer = styled.footer`
-    width: 70%;
+    width: 85%;
     display: flex;
     justify-content: space-between;
     align-items: center;  
