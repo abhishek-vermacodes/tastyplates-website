@@ -4,3 +4,4 @@ export * from "./footer";
 export * from "./button";
 export * from "./typography";
 export * from "./cards";
+export * from "./heading";

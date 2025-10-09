@@ -5,11 +5,10 @@ import BgImg from "@/assets/images/todayspecial.jpg";
 import FoodImg from "@/assets/images/pizza (2).png";
 import {
   SectionWrapper,
-  Overlay,
   ContentWrapper,
   CardContainer,
 } from "./styled";
-import { Card, Heading } from "@/components";
+import {  Heading, TodaysSpecialCard } from "@/components";
 
 const TodaySpecial = () => {
   return (
@@ -30,7 +29,7 @@ const TodaySpecial = () => {
         />
 
         <CardContainer>
-          <Card
+          <TodaysSpecialCard
             image={FoodImg}
             title="Grilled Chicken"
             category="Pizza"
@@ -38,7 +37,7 @@ const TodaySpecial = () => {
             rating={4.5}
             price={99.99}
           />
-          <Card
+          <TodaysSpecialCard
             image={FoodImg}
             title="Pasta Alfredo"
             category="Pizza"
@@ -46,7 +45,7 @@ const TodaySpecial = () => {
             rating={4.5}
             price={99.99}
           />
-          <Card
+          <TodaysSpecialCard
             image={FoodImg}
             title="Pasta Alfredo"
             category="Pizza"
@@ -54,7 +53,7 @@ const TodaySpecial = () => {
             rating={4.5}
             price={99.99}
           />
-          <Card
+          <TodaysSpecialCard
             image={FoodImg}
             title="Pasta Alfredo"
             category="Pizza"
@@ -62,7 +61,7 @@ const TodaySpecial = () => {
             rating={4.5}
             price={99.99}
           />
-          <Card
+          <TodaysSpecialCard
             image={FoodImg}
             title="Pasta Alfredo"
             category="Pizza"
@@ -70,7 +69,7 @@ const TodaySpecial = () => {
             rating={4.5}
             price={99.99}
           />
-          <Card
+          <TodaysSpecialCard
             image={FoodImg}
             title="Pasta Alfredo"
             category="Pizza"
