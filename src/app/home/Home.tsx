@@ -2,9 +2,9 @@
 
 import React from "react";
 
-import { HeroSection } from "./components";
 import TodaySpecial from "./components/today-special/TodaySpecial";
 import GetApp from "./components/get-app/GetApp";
+import { AboutSection, EasyToOrder, HeroSection } from "./components";
 
 export const Home = () => {
   return (
@@ -12,6 +12,8 @@ export const Home = () => {
       <HeroSection />
       <TodaySpecial/>
       <GetApp/>
+      <EasyToOrder />
+      <AboutSection />
     </>
   );
 };
