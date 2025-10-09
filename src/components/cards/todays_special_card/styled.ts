@@ -2,14 +2,21 @@ import { COLOR } from "@/theme";
 import styled from "styled-components";
 
 export const CardWrapper = styled.div`
-  width: 210px;
-  height: 230px;
-  background-color: #dce7d1ff;
+  width: 230px;
+  height: 250px;
   border-radius: 16px;
-  padding: 14px;
+  padding: 16px;
   position: relative;
   display: flex;
-  
+  border: 1px solid #6e9b4365;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  background-color: #ffffffc4;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  }
 `;
 
 export const ImageContainer = styled.div`
@@ -23,7 +30,7 @@ export const ImageContainer = styled.div`
   z-index: 10;
 
   .card-img {
-    border: 8px solid #0c0f11;
+    border: 8px solid #f5f5f5;
     border-radius: 100%;
   }
 `;
@@ -62,6 +69,8 @@ export const Price = styled.div`
   font-size: 22px;
   font-weight: 700;
   color: #555;
+
+
 `;
 
 export const BuyButton = styled.button`
@@ -83,16 +92,20 @@ export const BuyButton = styled.button`
 export const PriceButtonWrapper = styled.div`
   display: flex;
   justify-content: space-between;
-
   align-items: center;
   width: 100%;
+
+  .strike {
+    font-weight: 500;
+    font-size: 18px;
+  }
 `;
 
 export const CategoryTag = styled.div`
   position: absolute;
   top: 10px;
- left: 10px;
- border: 1px solid #ccc;
+  left: 10px;
+  border: 1px solid #d97706ab;
   background-color: #ffedd569;
   color: #d97706;
   font-size: 14px;
@@ -100,6 +113,4 @@ export const CategoryTag = styled.div`
   padding: 4px 10px;
   border-radius: 16px;
   text-transform: capitalize;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
-  /* z-index: 11; */
 `;

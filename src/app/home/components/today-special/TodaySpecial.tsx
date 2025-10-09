@@ -13,13 +13,13 @@ import {  Heading, TodaysSpecialCard } from "@/components";
 const TodaySpecial = () => {
   return (
     <SectionWrapper>
-      <Image
+      {/* <Image
         className="banner-img"
         src={BgImg}
         alt="Banner Image"
         fill
         style={{ objectFit: "cover" }}
-      />
+      /> */}
 
       <ContentWrapper>
         <Heading
@@ -31,9 +31,8 @@ const TodaySpecial = () => {
         <CardContainer>
           <TodaysSpecialCard
             image={FoodImg}
-            title="Grilled Chicken"
+            title="Grilled Potato"
             category="Pizza"
-            // description="Juicy grilled chicken served with seasonal vegetables and special sauce."
             rating={4.5}
             price={99.99}
           />
@@ -41,7 +40,6 @@ const TodaySpecial = () => {
             image={FoodImg}
             title="Pasta Alfredo"
             category="Pizza"
-            // description="Creamy Alfredo pasta with fresh herbs and parmesan cheese."
             rating={4.5}
             price={99.99}
           />
@@ -49,7 +47,6 @@ const TodaySpecial = () => {
             image={FoodImg}
             title="Pasta Alfredo"
             category="Pizza"
-            // description="Creamy Alfredo pasta with fresh herbs and parmesan cheese."
             rating={4.5}
             price={99.99}
           />
@@ -57,7 +54,6 @@ const TodaySpecial = () => {
             image={FoodImg}
             title="Pasta Alfredo"
             category="Pizza"
-            // description="Creamy Alfredo pasta with fresh herbs and parmesan cheese."
             rating={4.5}
             price={99.99}
           />
@@ -65,7 +61,6 @@ const TodaySpecial = () => {
             image={FoodImg}
             title="Pasta Alfredo"
             category="Pizza"
-            // description="Creamy Alfredo pasta with fresh herbs and parmesan cheese."
             rating={4.5}
             price={99.99}
           />
@@ -73,10 +68,24 @@ const TodaySpecial = () => {
             image={FoodImg}
             title="Pasta Alfredo"
             category="Pizza"
-            // description="Creamy Alfredo pasta with fresh herbs and parmesan cheese."
             rating={4.5}
             price={99.99}
           />
+          <TodaysSpecialCard
+            image={FoodImg}
+            title="Pasta Alfredo"
+            category="Pizza"
+            rating={4.5}
+            price={99.99}
+          />
+          <TodaysSpecialCard
+            image={FoodImg}
+            title="Pasta Alfredo"
+            category="Pizza"
+            rating={4.5}
+            price={99.99}
+          />
+
         </CardContainer>
       </ContentWrapper>
     </SectionWrapper>

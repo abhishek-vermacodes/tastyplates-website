@@ -1,5 +1,5 @@
 import React from "react";
-import { MainWrapper, ContentSection, ImageSection } from "./styled";
+import { MainWrapper, ContentSection, ImageSection, Heading, Description, GetAppContainer, GetAppLogoContainer, TextContainer } from "./styled";
 import Image from "next/image";
 import Logo from "@/assets/images/logos/W-LOGO.png"
 import QRLogo from "@/assets/images/QR.webp"
@@ -8,26 +8,22 @@ import QRLogo from "@/assets/images/QR.webp"
 const GetApp = () => {
   return (
     <MainWrapper>
-      {/* Left side — content */}
-      <ContentSection>
+      <GetAppContainer>
+        <ContentSection>
+          <GetAppLogoContainer>
+            <Image src={Logo} alt="Logo" className="logo" />
+          </GetAppLogoContainer>
+          <TextContainer>
+            <Heading>Get the Tasty Plate App now!</Heading>
+            <Description>
+              For best offers and discounts curated specially for you.
+            </Description>
+          </TextContainer>
+        </ContentSection>
         <ImageSection>
-          <Image src={Logo} alt="Logo" className="logo" />
+          <Image src={QRLogo} alt="App Preview" />
         </ImageSection>
-        <h2>Get Our App</h2>
-        <p>
-          Order your favorite food quickly and easily with our mobile app.
-          Download now to enjoy exclusive offers and a seamless experience!
-        </p>
-        <div className="buttons">
-          <button>Download for iOS</button>
-          <button>Download for Android</button>
-        </div>
-      </ContentSection>
-
-      {/* Right side — image */}
-      <ImageSection>
-        <Image src={QRLogo} alt="App Preview" />
-      </ImageSection>
+      </GetAppContainer>
     </MainWrapper>
   );
 };

@@ -6,6 +6,8 @@ export const SectionWrapper = styled.section`
   width: ${SIZE_PERCENT.P100};
   height: 100vh;
   overflow: hidden;
+  /* background-color: #ebebeb;*/
+  background-color: #ffffff;
 
   .banner-img {
     position: absolute;
@@ -17,15 +19,6 @@ export const SectionWrapper = styled.section`
   }
 `;
 
-export const Overlay = styled.div`
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.4);
-  top: 0;
-  left: 0;
-  z-index: 2;
-`;
 
 export const ContentWrapper = styled.div`
   position: absolute;
@@ -45,7 +38,7 @@ export const ContentWrapper = styled.div`
 
 export const CardContainer = styled.div`
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+  grid-template-columns: repeat(4, 1fr); /* 3 cards per row */
   gap: ${SPACING.P100};
   width: 100%;
   margin-top: ${SPACING.P100};

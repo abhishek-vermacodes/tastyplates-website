@@ -10,10 +10,10 @@ export const Home = () => {
   return (
     <>
       <HeroSection />
+      <EasyToOrder />             
       <TodaySpecial/>
       <GetApp/>
-      <EasyToOrder />
-      <AboutSection />
+      {/* <AboutSection /> */}
     </>
   );
 };

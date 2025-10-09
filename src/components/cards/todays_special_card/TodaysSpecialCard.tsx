@@ -13,6 +13,7 @@ import {
   Rating,
 } from "./styled";
 import { CardProps } from "./type";
+import { IoCartOutline } from "react-icons/io5";
 
 export const TodaysSpecialCard = ({
   image,
@@ -37,10 +38,15 @@ export const TodaysSpecialCard = ({
         {category && <CategoryTag>{category}</CategoryTag>}
         <Title>{title}</Title>
         <Rating>{`⭐⭐⭐⭐⭐ (${rating})`}</Rating>
-
         <PriceButtonWrapper>
           <Price>{`$${price}`}</Price>
+          <Price className="strike">
+            <strike> {`$${price}`}</strike>
+          </Price>
+        </PriceButtonWrapper>
+        <PriceButtonWrapper>
           <BuyButton>Buy Now</BuyButton>
+          <IoCartOutline color="#397431" size={26}/>
         </PriceButtonWrapper>
       </CardContent>
     </CardWrapper>

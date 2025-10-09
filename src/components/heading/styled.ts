@@ -38,6 +38,7 @@ export const Subheading = styled.h1<{ $textAlign?: TextAlign }>`
   font-family: var(--font-csbrian);
   text-align: ${({ $textAlign = "center" }) => $textAlign};
   font-size: 40px;
+  color: ${COLOR.text.primary};
 `;
 
 export const DescText = styled.p`
