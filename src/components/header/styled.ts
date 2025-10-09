@@ -1,4 +1,4 @@
-import { BORDER, COLOR, SIZE_PERCENT, SIZE_PX } from "@/theme";
+import { COLOR, SIZE_PERCENT, SIZE_PX } from "@/theme";
 import styled from "styled-components";
 
 export const HeaderWrapper = styled.header`
@@ -8,9 +8,7 @@ export const HeaderWrapper = styled.header`
   display: flex;
   align-items: center;
   justify-content: center;
-  /* background: ${COLOR.white}; */
-  background: #f5f5f5ce;
-  /* border-bottom: ${BORDER.LIGHT_GRAY}; */
+  background: #f5f5f5ff;
   z-index: 30;
   overflow-x: hidden;
   padding: 10px 0;
@@ -34,7 +32,10 @@ export const HeaderSubWrapper = styled.div`
 
 export const LogoContainer = styled.div`
   width: 250px;
- 
+   display: flex;
+   justify-content: center;
+    align-items: center;
+    
   .logo-image {
     width: 100%;
     height: 100%;
@@ -55,7 +56,6 @@ export const NavList = styled.ul`
 export const NavItem = styled.li`
   a {
     text-decoration: none;
-    /* color: ${COLOR.text.primary}; */
     color:  #0b1629ff;
     font-weight: 500;
     font-size: 1rem;

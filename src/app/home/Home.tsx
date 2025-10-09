@@ -2,12 +2,14 @@
 
 import React from "react";
 
-import { HeroSection } from "./components";
+import { AboutSection, EasyToOrder, HeroSection } from "./components";
 
 export const Home = () => {
   return (
     <>
       <HeroSection />
+      <EasyToOrder />
+      <AboutSection />
     </>
   );
 };

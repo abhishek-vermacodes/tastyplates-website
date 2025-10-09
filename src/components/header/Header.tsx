@@ -36,7 +36,6 @@ export const Header = () => {
         <HeaderSubWrapper>
           <LogoContainer>
             <Image src={logo} alt="Kriotek Logo" className="logo-image" />
-            {/* <h2>TastyPlates</h2> */}
           </LogoContainer>
 
           <nav>
