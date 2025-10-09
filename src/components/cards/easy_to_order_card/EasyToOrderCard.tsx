@@ -12,8 +12,10 @@ export const InfoCard = ({ imageSrc, title, description, alt = "card image" }: I
             <ImageContainer>
                 <Image src={imageSrc} alt={alt} className="image" />
             </ImageContainer>
-            <CardTitle>{title}</CardTitle>
-            <CardDescription>{description}</CardDescription>
+            <div style={{display: 'flex', flexDirection: 'column', gap: '16px'}}>
+             <CardTitle>{title}</CardTitle>
+             <CardDescription>{description}</CardDescription>
+            </div>
         </CardWrapper>
     );
 };

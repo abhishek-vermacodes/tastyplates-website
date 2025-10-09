@@ -2,10 +2,11 @@ import styled from "styled-components";
 
 export const CardWrapper = styled.div`
   width: 300px;
-  height: 300px;
+  height: 340px;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
+  gap: 20px;
   align-items: center;
   text-align: center;
   padding: 20px;
@@ -43,7 +44,6 @@ export const ImageContainer = styled.div`
 export const CardTitle = styled.h3`
   font-size: 20px;
   color: #5d833a;
-  margin: 10px 0 5px;
   transition: color 0.3s ease;
 
   ${CardWrapper}:hover & {
