@@ -96,12 +96,12 @@ export const ButtonContainer = styled.div`
 export const SignInButton = styled.button`
   background-color: #5d833a;
   color: white;
-  border: 1px solid #5d833a;
+ border: none;
   border-radius: 25px;
   padding: 0.6rem 2rem;
   font-weight: 600;
   cursor: pointer;
-  box-shadow: 0 2px 6px rgba(93, 131, 58, 0.25);
+
 
   &:hover {
     background-color: #3b5325;
