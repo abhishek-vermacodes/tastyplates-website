@@ -34,6 +34,7 @@ export const ContentWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   gap: ${SPACING.P30};
+ 
 `;
 
 export const CardContainer = styled.div`

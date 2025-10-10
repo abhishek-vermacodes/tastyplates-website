@@ -1,21 +1,20 @@
-import { COLOR } from "@/theme";
+
 import styled from "styled-components";
 
 export const CardWrapper = styled.div`
   width: 230px;
   height: 250px;
   border-radius: 16px;
-  padding: 16px;
+  padding: 18px;
   position: relative;
   display: flex;
   border: 1px solid #6e9b4365;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-  background-color: #ffffffc4;
-
+  background: linear-gradient(145deg, #ffffff, #fafafa);
   &:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    transform: translateY(-6px);
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.12);
   }
 `;
 
@@ -27,11 +26,15 @@ export const ImageContainer = styled.div`
   width: 30px;
   height: 50px;
   border-radius: 50%;
-  z-index: 10;
 
   .card-img {
-    border: 8px solid #f5f5f5;
+    border: 8px solid #fff;
     border-radius: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+  }
+  ${CardWrapper}:hover & .card-img {
+    transform: scale(1.05);
   }
 `;
 
@@ -51,7 +54,7 @@ export const CardContent = styled.div`
 export const Title = styled.h3`
   font-size: 18px;
   font-weight: 600;
-  color:${COLOR.text.primary};
+  color: #333333;
 `;
 
 export const Description = styled.p`
@@ -68,24 +71,30 @@ export const Rating = styled.div`
 export const Price = styled.div`
   font-size: 22px;
   font-weight: 700;
-  color: #555;
-
-
+  color: #2e7d32;
+`;
+export const PriceBefore = styled.div`
+  font-size: 18px;
+  font-weight: 500;
+  color: #999;
+  text-decoration: line-through;
 `;
 
 export const BuyButton = styled.button`
   all: unset;
   font-size: 12px;
-  background-color: #5d833a;
+  background: linear-gradient(90deg, #5d833a, #88b557);
   color: white;
   font-weight: 600;
   padding: 6px 12px;
   border-radius: 20px;
   cursor: pointer;
-  transition: all 0.2s;
+  transition: all 0.3s ease;
 
   &:hover {
     background-color: #6d9b43ff;
+    transform: scale(1.05);
+   
   }
 `;
 
@@ -95,10 +104,7 @@ export const PriceButtonWrapper = styled.div`
   align-items: center;
   width: 100%;
 
-  .strike {
-    font-weight: 500;
-    font-size: 18px;
-  }
+ 
 `;
 
 export const CategoryTag = styled.div`
@@ -113,4 +119,30 @@ export const CategoryTag = styled.div`
   padding: 4px 10px;
   border-radius: 16px;
   text-transform: capitalize;
+`;
+
+export const IconWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 1px solid #e0e0e0;
+  color: #397431; /* Default icon color */
+  background: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  svg {
+    font-size: 1.4rem;
+    transition: all 0.3s ease;
+  }
+
+  &:hover {
+    background: #88b557;
+    border-color: transparent;
+    color: white;
+    transform: scale(1.05);
+  }
 `;

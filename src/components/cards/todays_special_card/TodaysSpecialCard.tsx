@@ -10,10 +10,12 @@ import {
   BuyButton,
   PriceButtonWrapper,
   CategoryTag,
-  Rating,
+  IconWrapper,
+  PriceBefore,
 } from "./styled";
 import { CardProps } from "./type";
 import { IoCartOutline } from "react-icons/io5";
+import Rating from "@mui/material/Rating";
 
 export const TodaysSpecialCard = ({
   image,
@@ -37,16 +39,25 @@ export const TodaysSpecialCard = ({
       <CardContent>
         {category && <CategoryTag>{category}</CategoryTag>}
         <Title>{title}</Title>
-        <Rating>{`⭐⭐⭐⭐⭐ (${rating})`}</Rating>
+
+        <Rating
+          name="read-only"
+          value={rating}
+          precision={0.5}
+          readOnly
+          size="small"
+        />
+
         <PriceButtonWrapper>
           <Price>{`$${price}`}</Price>
-          <Price className="strike">
-            <strike> {`$${price}`}</strike>
-          </Price>
+          <PriceBefore>{`$${price}`}</PriceBefore>
         </PriceButtonWrapper>
+
         <PriceButtonWrapper>
           <BuyButton>Buy Now</BuyButton>
-          <IoCartOutline color="#397431" size={26}/>
+          <IconWrapper>
+            <IoCartOutline />
+          </IconWrapper>
         </PriceButtonWrapper>
       </CardContent>
     </CardWrapper>
