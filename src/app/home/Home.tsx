@@ -2,9 +2,8 @@
 
 import React from "react";
 
-import TodaySpecial from "./components/today-special/TodaySpecial";
 import GetApp from "./components/get-app/GetApp";
-import { AboutSection, EasyToOrder, HeroSection } from "./components";
+import { AboutSection, EasyToOrder, HeroSection, TodaySpecial } from "./components";
 
 export const Home = () => {
   return (

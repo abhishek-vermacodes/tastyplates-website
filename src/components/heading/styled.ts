@@ -47,4 +47,5 @@ export const DescText = styled.p`
 
 export const DescWrapper = styled.div<{ $textAlign?: TextAlign }>`
   text-align: ${({ $textAlign = "center" }) => $textAlign};
+  color: #1a1a1aff;
 `;
