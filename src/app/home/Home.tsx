@@ -3,16 +3,17 @@
 import React from "react";
 
 import GetApp from "./components/get-app/GetApp";
-import { AboutSection, EasyToOrder, HeroSection, TodaySpecial } from "./components";
+import {AboutUsSection, Contact, EasyToOrder, HeroSection, TodaySpecial } from "./components";
 
 export const Home = () => {
   return (
     <>
       <HeroSection />
       <EasyToOrder />             
+      <AboutUsSection />
       <TodaySpecial/>
-      <GetApp/>
-      {/* <AboutSection /> */}
+      <GetApp />
+      <Contact />
     </>
   );
 };

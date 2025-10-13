@@ -3,3 +3,4 @@ export * from "./today-special";
 export * from "./get-app";
 export * from "./about";
 export * from "./easy-to-order";
+export * from "./contact";

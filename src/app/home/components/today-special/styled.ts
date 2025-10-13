@@ -5,7 +5,7 @@ export const SectionWrapper = styled.section`
   width: ${SIZE_PERCENT.P100};
   height: 100vh;
   overflow: hidden;
-  background-color: #ffffff;
+  background-color: #EEF3EB;
   display: flex;
   align-items: center;
   justify-content: center;
