@@ -8,7 +8,7 @@ export const HeaderWrapper = styled.header`
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #f5f5f5ff;
+  background: #eff3eb;
   z-index: 30;
   overflow-x: hidden;
   padding: 10px 0;
@@ -18,8 +18,6 @@ export const HeaderWrapper = styled.header`
     justify-content: center;
     align-items: center;
   }
-
-
 `;
 
 export const HeaderSubWrapper = styled.div`
