@@ -2,10 +2,11 @@ import styled from "styled-components";
 
 
 export const FooterWrapper = styled.footer`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #f1f1f1ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: #f1f1f1ff; */
+  background: #e9ede3;
 `;
 export const FooterContainer = styled.footer`
     width: 85%;

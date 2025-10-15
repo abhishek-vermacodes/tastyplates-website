@@ -6,18 +6,19 @@ export const CardWrapper = styled.div`
   display: flex;
 
   align-items: center;
+  border: 1px solid rgba(110, 155, 67, 0.25);
 
-  background: #fff;
-  border-radius: 20px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-
+  background: linear-gradient(180deg, #ffffff, #f7f9f6);
+  border-radius: 8px;
+  box-shadow: 0 6px 20px rgba(57, 116, 49, 0.1);
   position: relative;
   gap: 20px;
   transition: all 0.3s ease;
 
   &:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 12px 30px rgba(57, 116, 49, 0.2);
+    background: linear-gradient(180deg, #ffffff, #eff9ed);
   }
 `;
 

@@ -1,359 +1,8 @@
-// "use client";
-// import React, { useState } from "react";
-// import Image from "next/image";
-
-// import { FaRegStar } from "react-icons/fa";
-// import leafTopLeft from "@/assets/icons/shape36.png";
-// import leafBottomRight from "@/assets/icons/shape35.png";
-
-// import {
-//   MenuSectionWrapper,
-//   MenuWrapper,
-//   CategoryButtons,
-//   CategoryButton,
-//   CardGrid,
-//   CardWrapper,
-//   ImageWrapper,
-//   Content,
-//   TagsRow,
-//   Tag,
-//   Title,
-//   Price,
-//   Description,
-//   AddToCartButton,
-// } from "./styled";
-// import { Heading } from "@/components";
-// import { MenuItem } from "./type";
-
-// const menuData: MenuItem[] = [
-//   {
-//     id: 1,
-//     title: "Burger Kingo",
-//     image: "/pizza.png",
-//     description: "Gorgonzola, mozzarella, taleggio, red onions, capers, olives",
-//     category: "Burger",
-//     price: 25,
-//     tags: ["Vegetarian"],
-//     rating: 4.6,
-//   },
-//   {
-//     id: 2,
-//     title: "French Fries",
-//     image: "/pizza.png",
-//     description:
-//       "Crispy fries topped with herbs, Parmesan cheese, and olive oil",
-//     category: "Snacks",
-//     price: 25,
-//     tags: ["Vegan", "Vegetarian"],
-//     rating: 4.9,
-//   },
-//   {
-//     id: 3,
-//     title: "Pizza BBQ TinTin",
-//     image: "/pizza.png",
-//     description: "Smoky BBQ sauce with mozzarella, capsicum, and red onions",
-//     category: "Pizza",
-//     price: 18,
-//     tags: ["Vegetarian"],
-//     rating: 4.8,
-//   },
-//   {
-//     id: 4,
-//     title: "BBQ Pizza TinTin",
-//     image: "/pizza.png",
-//     description:
-//       "Classic Italian pizza with olives, red onions, and mozzarella",
-//     category: "Pizza",
-//     price: 20,
-//     tags: ["Vegan"],
-//     rating: 4.7,
-//   },
-// ];
-
-// const categories = ["All", "Burger", "Pizza", "Snacks"];
-
-// // Menu card component
-// function MenuCard(props: { item: MenuItem }) {
-//   const { item } = props;
-
-//   return (
-//     <CardWrapper>
-//       <TagsRow>
-//         <Tag>
-//           <FaRegStar size={14} color="#F6B100" style={{ marginRight: 4 }} />
-//           {item.rating}
-//         </Tag>
-//         {item.tags.map((tag) => (
-//           <Tag key={tag}>{tag}</Tag>
-//         ))}
-//       </TagsRow>
-//       {/* <Content> */}
-//       <ImageWrapper>
-//         <Image src={item.image} alt={item.title} width={120} height={120} />
-//       </ImageWrapper>
-//       {/* </Content> */}
-//       <Content>
-        
-//           <Title>{item.title}</Title>
-//           <Price>${item.price.toFixed(2)}</Price>
-//         <Description>{item.description}</Description>
-//         <AddToCartButton>Add To Cart</AddToCartButton>
-//       </Content>
-//     </CardWrapper>
-//   );
-// }
-
-// // Category button group component
-// function CategoryButtonGroup(props: {
-//   categories: string[];
-//   activeCategory: string;
-//   setActiveCategory: (cat: string) => void;
-// }) {
-//   const { categories, activeCategory, setActiveCategory } = props;
-
-//   return (
-//     <CategoryButtons>
-//       {categories.map((cat) => (
-//         <CategoryButton
-//           key={cat}
-//           active={(cat === activeCategory).toString()}
-//           onClick={() => setActiveCategory(cat)}
-//         >
-//           {cat}
-//         </CategoryButton>
-//       ))}
-//     </CategoryButtons>
-//   );
-// }
-
-// // Main page
-// function Page() {
-//   const [activeCategory, setActiveCategory] = useState("All");
-
-//   const filteredMenu =
-//     activeCategory === "All"
-//       ? menuData
-//       : menuData.filter((item) => item.category === activeCategory);
-
-//   return (
-//     <MenuSectionWrapper>
-//       {/* Background images */}
-//       <Image
-//         src={leafTopLeft}
-//         alt="Decor 1"
-//         width={180}
-//         height={180}
-//         style={{
-//           position: "absolute",
-//           top: "80px",
-//           left: "40px",
-//           zIndex: 0,
-//           opacity: 0.3,
-//         }}
-//       />
-//       <Image
-//         src={leafBottomRight}
-//         alt="Decor 2"
-//         width={200}
-//         height={200}
-//         style={{
-//           position: "absolute",
-//           bottom: "40px",
-//           right: "40px",
-//           zIndex: 0,
-//           opacity: 0.3,
-//         }}
-//       />
-
-//       <MenuWrapper>
-//         <Heading
-//           heading="MENU"
-//           subheading="Our Menu"
-//           textAlign="center"
-//           desc="Explore our diverse menu featuring a variety of delicious vegetarian dishes, crafted to satisfy every palate."
-//         />
-
-//         <CategoryButtonGroup
-//           categories={categories}
-//           activeCategory={activeCategory}
-//           setActiveCategory={setActiveCategory}
-//         />
-
-//         <CardGrid>
-//           {filteredMenu.map((item) => (
-//             <MenuCard key={item.id} item={item} />
-//           ))}
-//         </CardGrid>
-//       </MenuWrapper>
-//     </MenuSectionWrapper>
-//   );
-// }
-
-// export default Page;
-
-
-
-// "use client";
-// import React, { useState } from "react";
-// import Image from "next/image";
-
-// import leafTopLeft from "@/assets/icons/shape36.png";
-// import leafBottomRight from "@/assets/icons/shape35.png";
-
-// import {
-//   MenuSectionWrapper,
-//   MenuWrapper,
-//   CategoryButtons,
-//   CategoryButton,
-//   CardGrid,
-// } from "./styled";
-// import { Heading } from "@/components";
-// import { MenuItem } from "./type";
-// import FoodCard from "@/components/cards/food_card/FoodCard";
-
-// const menuData: MenuItem[] = [
-//   {
-//     id: 1,
-//     title: "Burger Kingo",
-//     image: "/pizza.png",
-//     description: "Gorgonzola, mozzarella, taleggio, red onions, capers, olives",
-//     category: "Burger",
-//     price: 25,
-//     tags: ["Vegetarian"],
-//     rating: 4.6,
-//   },
-//   {
-//     id: 2,
-//     title: "French Fries",
-//     image: "/pizza.png",
-//     description:
-//       "Crispy fries topped with herbs, Parmesan cheese, and olive oil",
-//     category: "Snacks",
-//     price: 25,
-//     tags: ["Vegan", "Vegetarian"],
-//     rating: 4.9,
-//   },
-//   {
-//     id: 3,
-//     title: "Pizza BBQ TinTin",
-//     image: "/pizza.png",
-//     description: "Smoky BBQ sauce with mozzarella, capsicum, and red onions",
-//     category: "Pizza",
-//     price: 18,
-//     tags: ["Vegetarian"],
-//     rating: 4.8,
-//   },
-//   {
-//     id: 4,
-//     title: "BBQ Pizza TinTin",
-//     image: "/pizza.png",
-//     description:
-//       "Classic Italian pizza with olives, red onions, and mozzarella",
-//     category: "Pizza",
-//     price: 20,
-//     tags: ["Vegan"],
-//     rating: 4.7,
-//   },
-// ];
-
-// const categories = ["All", "Burger", "Pizza", "Snacks"];
-
-// function CategoryButtonGroup({
-//   categories,
-//   activeCategory,
-//   setActiveCategory,
-// }: {
-//   categories: string[];
-//   activeCategory: string;
-//   setActiveCategory: (cat: string) => void;
-// }) {
-//   return (
-//     <CategoryButtons>
-//       {categories.map((cat) => (
-//         <CategoryButton
-//           key={cat}
-//           active={(cat === activeCategory).toString()}
-//           onClick={() => setActiveCategory(cat)}
-//         >
-//           {cat}
-//         </CategoryButton>
-//       ))}
-//     </CategoryButtons>
-//   );
-// }
-
-// function Page() {
-//   const [activeCategory, setActiveCategory] = useState("All");
-
-//   const filteredMenu =
-//     activeCategory === "All"
-//       ? menuData
-//       : menuData.filter((item) => item.category === activeCategory);
-
-//   return (
-//     <MenuSectionWrapper>
-//       {/* Background Images */}
-//       <Image
-//         src={leafTopLeft}
-//         alt="Decor 1"
-//         width={180}
-//         height={180}
-//         style={{
-//           position: "absolute",
-//           top: "80px",
-//           left: "40px",
-//           zIndex: 0,
-//           opacity: 0.3,
-//         }}
-//       />
-//       <Image
-//         src={leafBottomRight}
-//         alt="Decor 2"
-//         width={200}
-//         height={200}
-//         style={{
-//           position: "absolute",
-//           bottom: "40px",
-//           right: "40px",
-//           zIndex: 0,
-//           opacity: 0.3,
-//         }}
-//       />
-
-//       <MenuWrapper>
-//         <Heading
-//           heading="MENU"
-//           subheading="Our Menu"
-//           textAlign="center"
-//           desc="Explore our diverse menu featuring a variety of delicious vegetarian dishes, crafted to satisfy every palate."
-//         />
-
-//         <CategoryButtonGroup
-//           categories={categories}
-//           activeCategory={activeCategory}
-//           setActiveCategory={setActiveCategory}
-//         />
-
-//         <CardGrid>
-//           {filteredMenu.map((item) => (
-//             <FoodCard key={item.id} item={item} />
-//           ))}
-//         </CardGrid>
-//       </MenuWrapper>
-//     </MenuSectionWrapper>
-//   );
-// }
-
-// export default Page;
-
-
-
-
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
 
-import leafTopLeft from "@/assets/icons/shape36.png";
+import leafTopLeft from "@/assets/icons/tomato.png";
 import leafBottomRight from "@/assets/icons/shape35.png";
 
 import {
@@ -454,7 +103,6 @@ const menuData: MenuItem[] = [
     tags: ["Vegan"],
     rating: 4.7,
   },
- 
 ];
 
 const categories = ["All", "Burger", "Pizza", "Snacks"];
@@ -497,14 +145,14 @@ function Page() {
       <Image
         src={leafTopLeft}
         alt="Decor 1"
-        width={180}
-        height={180}
+        width={200}
+        height={200}
         style={{
           position: "absolute",
           top: "80px",
           left: "40px",
           zIndex: 0,
-          opacity: 0.3,
+          // opacity: 0.3,
         }}
       />
       <Image
@@ -517,7 +165,7 @@ function Page() {
           bottom: "40px",
           right: "40px",
           zIndex: 0,
-          opacity: 0.3,
+          // opacity: 0.3,
         }}
       />
 
@@ -537,7 +185,7 @@ function Page() {
 
         <CardGrid>
           {filteredMenu.map((item) => (
-            <MenuCard key={item.id} item={item} /> 
+            <MenuCard key={item.id} item={item}  />
           ))}
         </CardGrid>
       </MenuWrapper>

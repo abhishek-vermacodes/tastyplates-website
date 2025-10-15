@@ -10,10 +10,41 @@ import {
   CardContainer,
 } from "./styled";
 import { Heading, TodaysSpecialCard } from "@/components";
+import leafTopLeft from "@/assets/icons/shape36.png";
+import leafBottomRight from "@/assets/icons/shape35.png";
+
+import Image from "next/image";
 
 export const TodaySpecial = () => {
   return (
     <SectionWrapper>
+
+        <Image
+              src={leafTopLeft}
+              alt="Decor 1"
+              width={180}
+              height={180}
+              style={{
+                position: "absolute",
+                top: "40px",
+                left: "40px",
+                zIndex: 0,
+                // opacity: 0.3,
+              }}
+            />
+            <Image
+              src={leafBottomRight}
+              alt="Decor 2"
+              width={200}
+              height={200}
+              style={{
+                position: "absolute",
+                bottom: "40px",
+                right: "40px",
+                zIndex: 0,
+                // opacity: 0.3,
+              }}
+            />
       <ContentWrapper>
         <Heading
           heading="MENU SPECIAL"

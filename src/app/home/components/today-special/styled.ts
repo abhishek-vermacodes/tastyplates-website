@@ -1,10 +1,10 @@
 import styled from "styled-components";
 import { SIZE_PERCENT } from "@/theme";
 
-export const SectionWrapper = styled.section`
+export const SectionWrapper = styled.div`
   width: ${SIZE_PERCENT.P100};
   height: 100vh;
-  overflow: hidden;
+  position: relative;
   background-color: #EEF3EB;
   display: flex;
   align-items: center;
@@ -14,9 +14,9 @@ export const SectionWrapper = styled.section`
 
 export const ContentWrapper = styled.div`
   width: 80%;
-  z-index: 3;
-  text-align: center;
-  color: white;
+  /* z-index: 3; */
+  /* text-align: center; */
+  /* color: white; */
   display: flex;
   flex-direction: column;
   align-items: center;

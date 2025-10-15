@@ -7,9 +7,10 @@ export const MenuSectionWrapper = styled.div`
   /* height: 100vh; */
   padding: 120px 0;
   justify-content: center;
+  position: relative;
   align-items: center;
-  background-color: #eff3eb;
-  /* background-color: #ffffffff; */
+  /* background-color: #eff3eb; */
+  background-color: #ffffffff;
 `;
 
 export const MenuWrapper = styled.div`

@@ -7,7 +7,10 @@ import { IoCartOutline } from "react-icons/io5";
 import { IoMdHeartEmpty } from "react-icons/io";
 import { GoSearch } from "react-icons/go";
 import { IoMdClose } from "react-icons/io";
-import logo from '@/assets/images/TLogo.png';
+import logo from "@/assets/images/TLogo.png";
+import { useRouter } from "next/navigation";
+
+
 import {
   HeaderWrapper,
   HeaderSubWrapper,
@@ -26,7 +29,7 @@ import {
 
 export const Header = () => {
   const [showSearch, setShowSearch] = useState(false);
-
+  const router = useRouter();
   const handleToggleSearch = () => {
     setShowSearch((prev) => !prev);
   };
@@ -46,9 +49,7 @@ export const Header = () => {
               <NavItem>
                 <Link href="/menu">Menu</Link>
               </NavItem>
-              <NavItem>
-                <Link href="/shop">Shop</Link>
-              </NavItem>
+
               <NavItem>
                 <Link href="/about">About</Link>
               </NavItem>
@@ -64,6 +65,7 @@ export const Header = () => {
                 icon={
                   <IoCartOutline
                     style={{ fontSize: "24px", color: "#3b5325" }}
+                    onClick={() => router.push("/cart")}
                   />
                 }
               />

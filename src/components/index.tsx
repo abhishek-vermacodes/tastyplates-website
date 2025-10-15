@@ -5,3 +5,4 @@ export * from "./button";
 export * from "./typography";
 export * from "./cards";
 export * from "./heading";
+export * from "./size-dropdown";

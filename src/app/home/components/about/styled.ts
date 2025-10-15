@@ -73,18 +73,20 @@ export const BodyText = styled.p`
   line-height: 1.8;
   color: #555;
   margin-bottom: 2rem;
+  margin-top:15px;
 `;
 
 export const CtaButton = styled(Link)`
   display: inline-block;
-  background-color: '#2E7D32';
-  color: #ffffff;
+  background-color: "#2E7D32";
+  color: #555;
   padding: 12px 30px;
   border-radius: 50px;
   text-decoration: none;
   font-weight: 600;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(110, 155, 67, 0.25);
 
   &:hover {
     transform: translateY(-3px);
